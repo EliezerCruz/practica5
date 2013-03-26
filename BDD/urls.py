@@ -10,4 +10,11 @@ urlpatterns = patterns('',
 
 urlpatterns += patterns('',
     ('^pages/', include('django.contrib.flatpages.urls')),
+    (r'^home', 'django.views.generic.simple.direct_to_template',
+    {'template': '/home/alu4213/dsi/django_projects/BDD/mytemplates/home.html'}),
+    (r'^help', 'django.views.generic.simple.direct_to_template',
+    {'template': '/home/alu4213/dsi/django_projects/BDD/mytemplates/help.html'}),
+    (r'^about', 'django.views.generic.simple.direct_to_template',
+    {'template': '/home/alu4213/dsi/django_projects/BDD/mytemplates/about.html'}),
 )
+
